@@ -1,0 +1,327 @@
+body {
+    margin: auto;
+    padding: 50px;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* hide message if browser supports grid */
+@supports(display:grid) {
+    .message{
+        display: none;
+    }
+}
+
+/* message styling if grid not supported */
+.message {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    
+}
+
+
+/* Set up grid */
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "logo banner"
+        "side main"
+        "foot foot";
+        
+    background-color: #fff;
+    grid-gap: 4px;
+    }
+
+
+.box {
+    background-color: #444; /* dark grey */
+    border-radius: 5px;
+    padding: 20px;
+    }
+
+
+/* make logo and banner the same colour */
+.logo, .main {
+    background-color: #dfcfbc;  /* beige */
+}
+
+.banner, .side {
+    background-color: #d6d3d7; /* blue grey */
+}
+
+
+.logo {
+    grid-area: logo;
+    height: 150px;
+    border-radius: 0 5px 5px 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    
+}
+
+.banner {
+    grid-area: banner;
+    vertical-align: middle;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 150%;
+    max-height: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.main {
+    grid-area: main;
+    color: #000;
+}
+
+.side {
+    grid-area: side;
+    font-size: 14px;
+}
+
+.footer {
+    grid-area: foot;
+    text-align: right;
+    color: #fff;
+    background-color: #636263;
+}
+
+
+/*** Headings ***/
+
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.sub_heading {
+    font-family: 'Ubuntu', sans-serif;
+    color: #000000;
+    font-weight: bold;
+}
+
+/***** Links *****/
+
+/* links in page */
+
+a:link{color: #000000;}
+a:visited{color: #000000;}
+a:hover{color: #000000;}
+
+/* side links */
+a.side {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    text-decoration: none;
+}
+a.side:link, a.side:visited {color: #000;}
+a.side:hover {color:#b1b4b5; }
+a.side{
+    text-decoration: underline;
+}
+
+/**** Results ****/
+
+.results {
+    background-color: #f4ebe1;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+
+.error {
+    background-color: #ffe0ed;
+    border: 2px solid #8a1737;
+    color: #8a1737;
+    border-radius: 5px;
+    padding: 20px;
+    }
+
+.flex-container {
+    display: : flex;
+    flex-wrap: nowrap;
+  
+    
+}
+
+/* Star Rating CSS */
+/* Source: https:/codepen.io/Bluetidepro/pen/GkpEa */
+
+.star-ratings-sprite {
+  background: url("../images/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  /* margin: 0 auto; */
+  
+}
+
+.star-ratings-sprite-rating {
+    background: url("../images/star-rating-sprite.png") repeat-x;
+    background-position: 0%;
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display: block;
+}
+
+.searchform {
+    width: 250px;
+    margin: 5px;
+}
+
+.search {
+    padding: 8px 15px;
+    background: #fff;
+    border: 0px solid #dbdbdb;
+    width: 200px;
+}
+.submit {
+    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+    width: 45px;
+    left: -1px;
+    background-color: #636263;
+    color: #d6d3d7;
+    border: 1px solid #d6d3d7;
+    border-radius: 0 5px 5px 0;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #000;
+}
+ 
+input.search[type=text], select {
+    width: 200px;
+}
+
+input {
+    height: 40px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+/* Controls height of options in dropdown menus */
+.select{
+    height: 40px;
+    border: solid 1px #000;
+}
+.free {
+    width: 250px;
+    border-radius: 5px;
+    font-size: 105%;
+}
+.advanced-frame{
+    border-radius: 10px;
+    background-color:  #dfcfbc;
+    border: solid 1px #000;
+    padding: 5px;
+}
+.advanced-button {
+    margin: auto;
+    
+    width: 95%;
+    border-radius: 5px;
+    background-color: #000;
+    font-size: 105%;
+}
+.adv {
+    width: 95%;
+    margin-bottom: 5px;
+    border: solid 1px #000;
+}
+
+.adv-txt {
+    vertical-align: middle;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/* ensures that text is next to checkbox in advanced search form*/
+input[type="checkbox"] {
+    display: inline;
+    width: auto;
+}
+/* puts radio buttons next to each other in add entry form*/
+input[type="radio"] {
+    height: fit-content;
+    width: auto;
+    display: inline;
+}
+
+/* Extra Add Entry Styling */
+.add-entry {
+    max-width: 550px;
+    margin: auto;
+}
+.add-field {
+    
+}
+.new-input{
+    height: 40px;
+    margin: 1px;
+    padding: 10px;
+    display: block;
+    border: 0.1px solid #000;
+    box-sizing: border-box;
+    width: 500px;
+
+}
+.submit_button{
+    margin: auto;
+    width: 500px;
+    border-radius: 5px;
+    
+    border-color: aliceblue;
+    font-size: 105%;
+}
+.genre_drop{
+    width: 500px;
+    height: 40px;
+    margin: auto+1px;
+    border: solid 1px #000;
+
+}
+.add-field{
+    width: 500px;
+    font-family:sans-serif;
+    font-size: 15.5px;
+    
+}
+
+/* Form Error CSS */
+/* field backgrounds*/
+.form-ok {
+    background-color: #fff;
+    
+}
+
+.form-error {
+    background-color: #ff9e9e;
+    
+}
+
+.no-error {
+    display: none;
+    
+    
+}
+.error-text {
+    color: darkred;
+}
+.defaulted {
+    color: darkgreen;
+}
